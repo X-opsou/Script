@@ -1,5 +1,10 @@
-let obj = $response.body;
-var null_string = "";
-var obj1 = obj.replace(/<div class="footer_keywords container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="col-md-1 col-xs-3">[\s\S]*?<\/div>/g,null_string).replace(/<div class="footer_partners container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="container">[\s\S]*?<\/div>/g,null_string).replace(/<a href='#'>[\s\S]*?<\/div>/g,null_string)
-console.log(obj1)
-$done({body: obj1});
+function insertStr(soure, start, newStr){   
+    return soure.slice(0, start) + newStr + soure.slice(start);
+ }
+let obj = $response.body
+//var obj1 = obj.replace(/<head>/, '<head><link rel="stylesheet" href="https://raw.githubusercontent.com/Code-Dramatist/ss/main/math_css/math.css" type="text/css">')
+let newStr = 'style="display:none"'
+var start = obj.search(/div id="index-pop" class="ads"/)
+console.log(start)
+var obj1 = insertStr(obj,start,newStr)
+$done({body:obj1});
