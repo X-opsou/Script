@@ -3,6 +3,7 @@ function insertStr(soure, start, newStr){
  }
 
 let obj = $response.body
+let newStr = 'style="display:none"'
 var null_string = ""
 var start = obj.search(/class="text-center"><script/i)
 var obj1 = insertStr(obj,start,newStr)
