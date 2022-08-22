@@ -3,7 +3,7 @@ function insertStr(soure, start, newStr){
  }
 let obj = $response.body
 let newStr = 'style="display:none"'
-var start = obj.search(/div id="index-pop" class="ads"/i)
+var start = obj.search(/class="mobileAds"/i)
 var obj1 = insertStr(obj,start,newStr)
 console.log(obj1)
 $done({body:obj1});
