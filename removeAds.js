@@ -12,6 +12,6 @@ var obj2 = insertStr(obj1,start1,newStr)
 var start2 = obj2.search(/class="text-center"><script/i)
 var obj3 = insertStr(obj2,start2,newStr)
 var start3 = obj3.lastIndexOf('class="text-center"><script')
-var obj4 = insertStr(obj3,start3,newStr).replace(/<div class="ads text-center"[\s\S]*?<\/div>/g,null_string).replace(/<div class="footer_keywords container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="col-md-1 col-xs-3">[\s\S]*?<\/div>/g,null_string).replace(/<div class="footer_partners container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="container">[\s\S]*?<\/div>/g,null_string).replace(/<div id="footer">[\s\S]*?<\/div>/g,null_string).replace(/<div class="pop_bot">[\s\S]*?<\/div>/g,null_string)
+var obj4 = insertStr(obj3,start3,newStr)
 console.log(obj4)
 $done({body:obj4});
