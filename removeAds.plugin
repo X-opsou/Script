@@ -4,7 +4,7 @@
 #!homepage= https://github.com/X-opsou/Script
 
 [Script]
-http-response ^https?:\/\/www.papalah.com(\/\?qingse.one|\s)* requires-body=1,timeout=40,script-path=https://raw.githubusercontent.com/X-opsou/Script/main/removeAds.js,tag=屏蔽某学习网站广告
+http-response ^https?:\/\/www.papalah.com requires-body=1,timeout=40,script-path=https://raw.githubusercontent.com/X-opsou/Script/main/removeAds.js,tag=屏蔽某学习网站广告
 
 [MITM]
 hostname = www.papalah.com
