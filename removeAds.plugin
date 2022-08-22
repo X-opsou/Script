@@ -1,6 +1,7 @@
 #!name= 去某网站广告
 #!desc= 该插件适配Loon。仅以学习JavaScript为目的，尝试编写。
 #!author= opsou
+#!openUrl= https://github.com/X-opsou/Script
 #!homepage= https://github.com/X-opsou/Script
 
 [Script]
