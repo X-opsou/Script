@@ -1,5 +1,9 @@
+#!name= 去某网站广告
+#!desc= 该插件适配Loon。仅以学习JavaScript为目的，尝试编写。
+#!author= opsou
+
 [Script]
-http-response ^https?:\/\/www.papalah.com\/\?qingse.one requires-body=1,timeout=40,script-path=, tag=屏蔽某学习网站广告
+http-response ^https?:\/\/www.papalah.com\/\?qingse.one requires-body=1,timeout=40,script-path=https://raw.githubusercontent.com/X-opsou/Script/main/removeAds.js,tag=屏蔽某学习网站广告
 
 [MITM]
 hostname = www.papalah.com
