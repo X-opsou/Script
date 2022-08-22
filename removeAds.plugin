@@ -1,0 +1,5 @@
+[Script]
+http-response ^https?:\/\/www.papalah.com\/\?qingse.one requires-body=1,timeout=40,script-path=, tag=屏蔽某学习网站广告
+
+[MITM]
+hostname = www.papalah.com
