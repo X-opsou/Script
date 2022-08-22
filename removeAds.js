@@ -1,5 +1,9 @@
-let obj = $response.body;
-var null_string = "";
-var obj1 = obj.replace(/<div class="ads text-center"[\s\S]*?<\/div>/g,null_string).replace(/<div class="footer_keywords container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="col-md-1 col-xs-3">[\s\S]*?<\/div>/g,null_string).replace(/<div class="footer_partners container text-center">[\s\S]*?<\/div>/g,null_string).replace(/<div class="container">[\s\S]*?<\/div>/g,null_string).replace(/<a href='#' class='index-pop-close'[\s\S]*?<\/div>/g,null_string)
-console.log(obj1)
-$done({body: obj1});
+function insertStr(soure, start, newStr){   
+    return soure.slice(0, start) + newStr + soure.slice(start);
+ }
+let obj = $response.body
+let newStr = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/X-opsou/Script@main/web.css" type="text/css">'
+var start = obj.search(/<script type="text\/javascript"/)
+console.log(start)
+var obj1 = insertStr(obj,start,newStr).replace(/<div id="popup">[\s\S]*?<div class="text">[\s\S]*?<\/div>[\s\S]*?<\/div>/)
+$done({body:obj1});
