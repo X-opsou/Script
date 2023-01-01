@@ -1,1 +1,11 @@
-.v
+#!name= 获取电信Cookie
+#!desc= 该插件适配Loon。仅以学习JavaScript为目的，尝试编写。
+#!openUrl= https://github.com/X-opsou/Script
+#!author= opsou
+#!homepage= https://github.com/X-opsou/Script
+
+[Script]
+http-response ^https?:\/\/(e\.189\.cn\/store\/user|open\.e\.189\.cn\/api\/logbox\/oauth2\/loginSubmit\.do) requires-body=1,timeout=1000,script-path=https://raw.githubusercontent.com/X-opsou/Script/main/get10000Cookie.js,tag=获取电信Cookie
+
+[MITM]
+hostname = www.papalah.com
